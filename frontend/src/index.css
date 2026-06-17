@@ -1,0 +1,104 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Space Grotesk', system-ui, sans-serif;
+  --font-display: 'Sora', system-ui, sans-serif;
+  
+  --color-brand-purple: #6366f1;
+  --color-brand-teal: #06b6d4;
+  --color-brand-orange: #f97316;
+  --color-brand-dark: #0b0f19;
+  --color-brand-card: rgba(15, 23, 42, 0.65);
+  --color-brand-card-hover: rgba(23, 37, 84, 0.8);
+}
+
+@layer utilities {
+  .glass-card {
+    background: var(--color-brand-card);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+  }
+
+  .glass-card-interactive {
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .glass-card-interactive:hover {
+    background: var(--color-brand-card-hover);
+    border-color: rgba(6, 182, 212, 0.4);
+    box-shadow: 0 10px 40px -10px rgba(6, 182, 212, 0.3);
+    transform: translateY(-4px);
+  }
+
+  .glow-text-purple {
+    text-shadow: 0 0 20px rgba(99, 102, 241, 0.5);
+  }
+
+  .glow-text-teal {
+    text-shadow: 0 0 20px rgba(6, 182, 212, 0.5);
+  }
+
+  .glow-text-orange {
+    text-shadow: 0 0 20px rgba(249, 115, 22, 0.5);
+  }
+
+  .grid-bg {
+    background-size: 40px 40px;
+    background-image: 
+      linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-position: center;
+  }
+
+  .gradient-border {
+    position: relative;
+    border-radius: 1rem;
+    background: linear-gradient(to bottom right, rgba(99, 102, 241, 0.5), rgba(6, 182, 212, 0.5));
+    padding: 1px;
+  }
+
+  .gradient-border-inner {
+    background: #0b0f19;
+    border-radius: calc(1rem - 1px);
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #0b0f19;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
+
+/* Base Headings and typography setting */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+}
+
+/* Sub-animations */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-float-slow {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-float-fast {
+  animation: float 4s ease-in-out infinite;
+}
