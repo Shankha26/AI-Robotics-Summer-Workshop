@@ -22,7 +22,7 @@ export const ThreeDModel: React.FC = () => {
         camera-target="0m 1.05m 0m" // Raised target (focus on head/neck) to shift the robot lower inside the box
         field-of-view="46deg"        // Optimized zoom so the entire model and shadow sit cleanly in the box
         style={{
-          width: '100%',
+          width: '120%',
           height: '100%',
           background: 'transparent',
           outline: 'none',
