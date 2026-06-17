@@ -19,8 +19,8 @@ export const ThreeDModel: React.FC = () => {
         auto-rotate-delay="2000"
         rotation-per-second="12deg"
         camera-orbit="0deg 75deg 120%" // Adjusted orbit for perfect fit
-        camera-target="0m 1.05m 0m" // Raised target (focus on head/neck) to shift the robot lower inside the box
-        field-of-view="46deg"        // Optimized zoom so the entire model and shadow sit cleanly in the box
+        camera-target="0m 0.85m 0m" // Raised target (focus on head/neck) to shift the robot lower inside the box
+        field-of-view="56deg"        // Optimized zoom so the entire model and shadow sit cleanly in the box
         style={{
           width: '100%',
           height: '120%',
