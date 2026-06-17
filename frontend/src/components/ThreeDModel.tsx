@@ -2,9 +2,9 @@ import React from 'react';
 
 export const ThreeDModel: React.FC = () => {
   return (
-    <div className="relative w-full max-w-[600px] h-[380px] sm:h-[480px] md:h-[540px] flex items-center justify-center translate-y-2 lg:translate-y-4">
+    <div className="relative w-full max-w-[420px] h-[300px] sm:h-[380px] md:h-[420px] flex items-center justify-center">
       {/* Glow Halo behind model to give it a tech backdrop */}
-      <div className="absolute w-72 h-72 rounded-full bg-brand-teal/15 blur-[70px] pointer-events-none" />
+      <div className="absolute w-64 h-64 rounded-full bg-brand-teal/15 blur-[70px] pointer-events-none" />
 
       {/* Model Viewer Element */}
       {/* @ts-ignore - Ignore Custom Element typescript checking */}
@@ -18,9 +18,9 @@ export const ThreeDModel: React.FC = () => {
         interaction-prompt="auto"
         auto-rotate-delay="2000"
         rotation-per-second="12deg"
-        camera-orbit="0deg 75deg 140%" // Zoomed out further to reduce the robot's visual size
-        camera-target="0m 0.8m 0m" // Keep centered on chest
-        field-of-view="55deg"        // Zoom out to make the robot size smaller and fit cleanly
+        camera-orbit="0deg 75deg 110%" // Well-positioned camera orbit for the smaller container
+        camera-target="0m 0.85m 0m" // Balanced focal target centering the mascot
+        field-of-view="44deg"        // Optimized zoom to prevent clipping while filling the box nicely
         style={{
           width: '100%',
           height: '100%',
