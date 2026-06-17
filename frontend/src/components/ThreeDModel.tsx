@@ -18,9 +18,9 @@ export const ThreeDModel: React.FC = () => {
         interaction-prompt="auto"
         auto-rotate-delay="2000"
         rotation-per-second="12deg"
-        camera-orbit="0deg 75deg 125%" // Zoomed out further to eliminate any cropping or edge boundaries
-        camera-target="0m 0.8m 0m" // Focused on the chest to keep the model perfectly centered
-        field-of-view="48deg"        // Wider field of view to prevent the robot and its shadow from ever touching the canvas edges
+        camera-orbit="0deg 75deg 140%" // Zoomed out further to reduce the robot's visual size
+        camera-target="0m 0.8m 0m" // Keep centered on chest
+        field-of-view="55deg"        // Zoom out to make the robot size smaller and fit cleanly
         style={{
           width: '100%',
           height: '100%',
