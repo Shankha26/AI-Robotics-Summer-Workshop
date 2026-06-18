@@ -18,7 +18,7 @@ export const ThreeDModel: React.FC = () => {
         interaction-prompt="auto"
         auto-rotate-delay="2000"
         rotation-per-second="12deg"
-        camera-orbit="0deg 75deg 200%" // Zoomed out significantly to make the robot size very small
+        camera-orbit="0deg 75deg 500%" // Zoomed out significantly to make the robot size very small
         camera-target="0m 0.85m 0m" // Focused on chest area
         field-of-view="80deg"        // Extra wide field of view to make the mascot compact
         style={{
